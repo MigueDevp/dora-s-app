@@ -1,0 +1,143 @@
+<div class="login-container university-particles">
+  <div class="login-background">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+  </div>
+
+  <div class="login-card">
+    <div class="login-header">
+      <div class="logo">
+        <span class="logo-icon">🎓</span>
+        <h1>Portal del Alumno</h1>
+      </div>
+      <div class="university-badge">UTSJR</div>
+      <p class="welcome-text">Universidad Tecnológica de San Juan del Río</p>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <div class="form-group">
+        <label for="username" class="form-label">
+          <i class="icon"></i>
+          Matrícula o Usuario
+        </label>
+        <div class="input-container">
+          <input
+            type="text"
+            id="username"
+            formControlName="username"
+            class="form-input"
+            placeholder="Ingresa tu matrícula o usuario"
+            [class.error]="username?.invalid && username?.touched"
+          />
+          <div class="input-icon">
+            <i class="status-icon" [class.valid]="username?.valid">✓</i>
+          </div>
+        </div>
+        <div
+          class="error-message"
+          *ngIf="username?.invalid && username?.touched"
+        >
+          <span *ngIf="username?.errors?.['required']"
+            >La matrícula o usuario es requerido</span
+          >
+          <span *ngIf="username?.errors?.['minlength']"
+            >Mínimo 3 caracteres</span
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">
+          <i class="icon"></i>
+          Contraseña
+        </label>
+        <div class="input-container">
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            id="password"
+            formControlName="password"
+            class="form-input"
+            placeholder="Ingresa tu contraseña"
+            [class.error]="password?.invalid && password?.touched"
+          />
+          <div class="input-actions">
+            <button
+              type="button"
+              class="toggle-password"
+              (click)="togglePasswordVisibility()"
+            >
+              <i class="eye-icon">{{ showPassword ? "👁️" : "👁️‍🗨️" }}</i>
+            </button>
+            <div class="input-icon">
+              <i class="status-icon" [class.valid]="password?.valid">✓</i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="error-message"
+          *ngIf="password?.invalid && password?.touched"
+        >
+          <span *ngIf="password?.errors?.['required']"
+            >La contraseña es requerida</span
+          >
+          <span *ngIf="password?.errors?.['minlength']"
+            >Mínimo 6 caracteres</span
+          >
+        </div>
+      </div>
+
+      <!-- Recordarme y Olvidé contraseña -->
+      <div class="form-options">
+        <label class="checkbox-container">
+          <input type="checkbox" formControlName="rememberMe" />
+          <span class="checkmark"></span>
+          Recordar sesión
+        </label>
+        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <!-- Mensaje de Error -->
+      <div class="alert alert-error" *ngIf="errorMessage">
+        <i class="alert-icon">⚠️</i>
+        {{ errorMessage }}
+      </div>
+
+      <!-- Botón de Login -->
+      <button
+        type="submit"
+        class="login-btn"
+        [disabled]="loading || loginForm.invalid"
+        [class.loading]="loading"
+      >
+        <span class="btn-text" *ngIf="!loading">Iniciar Sesión</span>
+        <span class="btn-loading" *ngIf="loading">
+          <div class="spinner"></div>
+          Verificando...
+        </span>
+      </button>
+
+      <!-- Demo Credentials -->
+      <div class="demo-section">
+        <p class="demo-title">Credenciales de Demo:</p>
+        <div class="demo-buttons">
+          <button
+            type="button"
+            class="demo-btn"
+            *ngFor="let cred of demoCredentials; let i = index"
+            (click)="fillDemoCredentials(i)"
+          >
+            {{ cred.username }}
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Footer Universitario -->
+    <div class="login-footer">
+      <div class="utsjr-badge">UTSJR - 2024</div>
+      <p>
+        ¿Necesitas ayuda? <a href="#" class="signup-link">Contactar Soporte</a>
+      </p>
+    </div>
+  </div>
+</div>
