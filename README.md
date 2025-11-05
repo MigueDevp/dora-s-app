@@ -1,59 +1,100 @@
-# Dorasapp
+LOBO APP - Sistema Integral de Alumnos UTSJR
+<div align="center">
+https://img.shields.io/badge/LOBO_APP-UTSJR-blue?style=for-the-badge&logo=wolfram&logoColor=white
+https://img.shields.io/badge/v2.0-Lanzamiento-orange?style=for-the-badge
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+Versión mejorada del sistema de alumnos de la UTSJR
 
-## Development server
+</div>
+📋 Descripción
+Sistema web moderno para la gestión académica de estudiantes de la Universidad Tecnológica de San Juan del Río.
 
-To start a local development server, run:
+🚀 Instalación Rápida
+Prerrequisitos
+Navegador web moderno (Chrome, Firefox, Edge)
 
-```bash
-ng serve
-```
+Conexión a internet
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Cuenta institucional UTSJR
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Para Desarrollo
+bash
+# Clonar repositorio
+git clone https://github.com/MigueDevp/dora-s-app.git
 
-```bash
-ng generate component component-name
-```
+# Entrar al directorio
+cd dora-s-app
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+# Instalar dependencias
+npm install
 
-```bash
-ng generate --help
-```
+# Ejecutar en desarrollo
+npm start
+💻 Cómo Usar
+Acceso Principal
+Visita: GitHub Pages
 
-## Building
+Ingresa con tu matrícula UTSJR
 
-To build the project run:
+Usa tu contraseña institucional
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+🛠️ Solución de Problemas
+Problemas Comunes
+Problema	Solución
+Error de login	Verificar matrícula y contraseña
+Página no carga	Actualizar (F5) o limpiar cache
+Datos desactualizados	Esperar sincronización automática
+Error en móvil	Usar Chrome o Safari actualizado
+Comandos Útiles
+bash
+# Limpiar cache del proyecto
+npm run clean
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+# Build de producción
+npm run build
 
-```bash
-ng test
-```
+# Ejecutar tests
+npm test
+📞 Soporte y Contacto
+Canales de Ayuda
+📧 Departamento de Sistemas UTSJR: sistemas@utsjr.edu.mx
 
-## Running end-to-end tests
+🐛 Reportar Bugs: Abrir Issue
 
-For end-to-end (e2e) testing, run:
 
-```bash
-ng e2e
-```
+Información Técnica
+Framework: React.js
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Estilos: CSS3
 
-## Additional Resources
+Control de Versiones: Git
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Hosting: GitHub Pages
+
+🎯 Características Técnicas
+Compatibilidad
+✅ Windows (Chrome, Firefox, Edge)
+
+✅ macOS (Safari, Chrome, Firefox)
+
+✅ Linux (Chrome, Firefox)
+
+✅ Móviles (iOS, Android)
+
+Navegadores Soportados
+Navegador	Versión Mínima
+Chrome	80+
+Firefox	75+
+Safari	13+
+Edge	80+
+<div align="center">
+🐺 LOBO APP - Sistema Estudiantil UTSJR v2.0
+
+Desarrollado con ❤️ para la comunidad UTSJR
+
+https://img.shields.io/badge/Repositorio-GitHub-black?style=flat-square&logo=github
+
+</div>
